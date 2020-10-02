@@ -7,7 +7,7 @@ const nodemailer = require('nodemailer');
 async function getForecastData() {
   try {
     const cityId = 5176517;  // id for Westlake, OH USA
-    const apiKey = '274a8765fe7ee77bbd1114da296d1ce0'; // TODO: move this to a secret place
+    const apiKey = 'secret'; // TODO: move this to a secret place
     
     const { data } = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?id=${cityId}&appid=${apiKey}&units=imperial`)
 
@@ -111,7 +111,7 @@ async function sendAlertEmail( forecastArray ) {
       port: 587,
       auth: { 
         user: 'dorcas.bernhard61@ethereal.email',
-        pass: 'BcYwnCrqjNhdJvGdju'
+        pass: 'secret'
       }
     });
 
